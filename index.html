@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test CARS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .total-score {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Test CARS</h1>
+    <form id="cars-form">
+      <label for="interviewee-name">Nombre del entrevistado:</label>
+      <input type="text" id="interviewee-name" name="interviewee-name" required><br><br>
+      <label for="child-name">Nombre del niño:</label>
+      <input type="text" id="child-name" name="child-name" required><br><br>
+      <label for="child-age">Edad del niño:</label>
+      <input type="text" id="child-age" name="child-age" required><br><br>
+      <table>
+        <thead>
+          <tr>
+            <th>Pregunta</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1. Relación con las personas</td>
+            <td><input type="radio" name="q1" value="1"></td>
+            <td><input type="radio" name="q1" value="2"></td>
+            <td><input type="radio" name="q1" value="3"></td>
+            <td><input type="radio" name="q1" value="4"></td>
+          </tr>
+          <tr>
+            <td>2. Imitación</td>
+            <td><input type="radio" name="q2" value="1"></td>
+            <td><input type="radio" name="q2" value="2"></td>
+            <td><input type="radio" name="q2" value="3"></td>
+            <td><input type="radio" name="q2" value="4"></td>
+          </tr>
+          <tr>
+            <td>3. Respuesta emocional</td>
+            <td><input type="radio" name="q3" value="1"></td>
+            <td><input type="radio" name="q3" value="2"></td>
+            <td><input type="radio" name="q3" value="3"></td>
+            <td><input type="radio" name="q3" value="4"></td>
+          </tr>
+          <tr>
+            <td>4. Uso del cuerpo</td>
+            <td><input type="radio" name="q4" value="1"></td>
+            <td><input type="radio" name="q4" value="2"></td>
+            <td><input type="radio" name="q4" value="3"></td>
+            <td><input type="radio" name="q4" value="4"></td>
+          </tr>
+          <tr>
+            <td>5. Uso del lenguaje verbal</td>
+            <td><input type="radio" name="q5" value="1"></td>
+            <td><input type="radio" name="q5" value="2"></td>
+            <td><input type="radio" name="q5" value="3"></td>
+            <td><input type="radio" name="q5" value="4"></td>
+          </tr>
+          <tr>
+            <td>6. Conversación</td>
+            <td><input type="radio" name="q6" value="1"></td>
+            <td><input type="radio" name="q6" value="2"></td>
+            <td><input type="radio" name="q6" value="3"></td>
+            <td><input type="radio" name="q6" value="4"></td>
+          </tr>
+          <tr>
+            <td>7. Intereses en objetos inusuales</td>
+            <td><input type="radio" name="q7" value="1"></td>
+            <td><input type="radio" name="q7" value="2"></td>
+            <td><input type="radio" name="q7" value="3"></td>
+            <td><input type="radio" name="q7" value="4"></td>
+          </tr>
+          <tr>
+            <td>8. Respuesta a estímulos auditivos</td>
+            <td><input type="radio" name="q8" value="1"></td>
+            <td><input type="radio" name="q8" value="2"></td>
+            <td><input type="radio" name="q8" value="3"></td>
+            <td><input type="radio" name="q8" value="4"></td>
+          </tr>
+          <tr>
+            <td>9. Mirada y fijación de la mirada</td>
+            <td><input type="radio" name="q9" value="1"></td>
+            <td><input type="radio" name="q9" value="2"></td>
+            <td><input type="radio" name="q9" value="3"></td>
+            <td><input type="radio" name="q9" value="4"></td>
+          </tr>
+          <tr>
+            <td>10. Expresiones faciales</td>
+            <td><input type="radio" name="q10" value="1"></td>
+            <td><input type="radio" name="q10" value="2"></td>
+            <td><input type="radio" name="q10" value="3"></td>
+            <td><input type="radio" name="q10" value="4"></td>
+          </tr>
+          <tr>
+            <td>11. Postura corporal</td>
+            <td><input type="radio" name="q11" value="1"></td>
+            <td><input type="radio" name="q11" value="2"></td>
+            <td><input type="radio" name="q11" value="3"></td>
+            <td><input type="radio" name="q11" value="4"></td>
+          </tr>
+          <tr>
+            <td>12. Respuesta a la comunicación</td>
+            <td><input type="radio" name="q12" value="1"></td>
+            <td><input type="radio" name="q12" value="2"></td>
+            <td><input type="radio" name="q12" value="3"></td>
+            <td><input type="radio" name="q12" value="4"></td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="submit" value="Calcular puntuación total">
+    </form>
+    <div id="total-score" class="total-score"></div>
+    <p>Los datos se han guardado correctamente en Google Sheets. Puedes acceder a la hoja de cálculo <a
+        href="https://docs.google.com/spreadsheets/d/17fU3QNblwJ6ri8wA0j1wdbugd-w5SS0H_FJ8ZqQuj5E/edit#gid=0"
+        target="_blank">aquí</a>.</p>
+  </div>
+
+  <script>
+    document.getElementById("cars-form").addEventListener("submit", function (event) {
+      event.preventDefault();
+      calculateScore();
+    });
+
+    function calculateScore() {
+      let score = 0;
+      const form = document.getElementById("cars-form");
+      for (let i = 1; i <= 15; i++) {
+        const selectedOption = form.elements[`q${i}`].value;
+        score += parseInt(selectedOption);
+      }
+      const totalScore = document.getElementById("total-score");
+      totalScore.innerHTML = `<p>Puntuación Total: ${score}</p>`;
+      const classification = getClassification(score);
+      totalScore.innerHTML += `<p>Clasificación del autismo: ${classification}</p>`;
+      sendDataToGoogleSheets(score, classification);
+    }
+
+    function getClassification(score) {
+      let classification = "";
+      if (score >= 36) {
+        classification = "Autismo Severo";
+      } else if (score >= 30 && score < 36) {
+        classification = "Autismo Moderado";
+      } else if (score >= 15 && score < 30) {
+        classification = "Ausencia del Síndrome Autista";
+      }
+      return classification;
+    }
+
+    function sendDataToGoogleSheets(score, classification) {
+      const formData = new FormData();
+      formData.append("interviewee-name", document.getElementById("interviewee-name").value);
+      formData.append("child-name", document.getElementById("child-name").value);
+      formData.append("child-age", document.getElementById("child-age").value);
+      formData.append("score", score);
+      formData.append("classification", classification);
+
+      fetch("https://script.google.com/macros/s/AKfycbzz2SiKgApjDx_cK02hr39TORYDLHAC5o_5ysx8zLZpWe_va-w4hJhQnDUs3Nm2Nmk_pQ/exec", {
+        method: "POST",
+        body: formData
+      })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+    }
+  </script>
+</body>
+</html>
