@@ -167,19 +167,19 @@
       calculateScore();
     });
 
-    function calculateScore() {
-      let score = 0;
-      const form = document.getElementById("cars-form");
-      for (let i = 1; i <= 15; i++) {
-        const selectedOption = form.elements[`q${i}`].value;
-        score += parseInt(selectedOption);
-      }
-      const totalScore = document.getElementById("total-score");
-      totalScore.innerHTML = `<p>Puntuación Total: ${score}</p>`;
-      const classification = getClassification(score);
-      totalScore.innerHTML += `<p>Clasificación del autismo: ${classification}</p>`;
-      sendDataToGoogleSheets(score, classification);
-    }
+ function calculateScore() {
+  let score = 0;
+  const form = document.getElementById("cars-form");
+  for (let i = 1; i <= 12; i++) {
+    const selectedOption = form.elements[`q${i}`].value;
+    score += parseInt(selectedOption);
+  }
+  const totalScore = document.getElementById("total-score");
+  const classification = getClassification(score);
+  totalScore.innerHTML = `<p>Puntuación Total: ${score}</p><p>Clasificación del autismo: ${classification}</p>`;
+  sendDataToGoogleSheets(score, classification);
+}
+
 
     function getClassification(score) {
       let classification = "";
