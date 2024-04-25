@@ -75,82 +75,106 @@
             <td><input type="radio" name="q1" value="4"></td>
           </tr>
           <tr>
-            <td>2. Imitación</td>
+            <td>2. Relación con las personas</td>
             <td><input type="radio" name="q2" value="1"></td>
             <td><input type="radio" name="q2" value="2"></td>
             <td><input type="radio" name="q2" value="3"></td>
             <td><input type="radio" name="q2" value="4"></td>
           </tr>
           <tr>
-            <td>3. Respuesta emocional</td>
+            <td>3. Relación con las personas</td>
             <td><input type="radio" name="q3" value="1"></td>
             <td><input type="radio" name="q3" value="2"></td>
             <td><input type="radio" name="q3" value="3"></td>
             <td><input type="radio" name="q3" value="4"></td>
           </tr>
           <tr>
-            <td>4. Uso del cuerpo</td>
+            <td>4. Relación con las personas</td>
             <td><input type="radio" name="q4" value="1"></td>
             <td><input type="radio" name="q4" value="2"></td>
             <td><input type="radio" name="q4" value="3"></td>
             <td><input type="radio" name="q4" value="4"></td>
           </tr>
           <tr>
-            <td>5. Uso del lenguaje verbal</td>
+            <td>5. Relación con las personas</td>
             <td><input type="radio" name="q5" value="1"></td>
             <td><input type="radio" name="q5" value="2"></td>
             <td><input type="radio" name="q5" value="3"></td>
             <td><input type="radio" name="q5" value="4"></td>
           </tr>
           <tr>
-            <td>6. Conversación</td>
+            <td>6. Relación con las personas</td>
             <td><input type="radio" name="q6" value="1"></td>
             <td><input type="radio" name="q6" value="2"></td>
             <td><input type="radio" name="q6" value="3"></td>
             <td><input type="radio" name="q6" value="4"></td>
           </tr>
+
           <tr>
-            <td>7. Intereses en objetos inusuales</td>
+            <td>7. Relación con las personas</td>
             <td><input type="radio" name="q7" value="1"></td>
             <td><input type="radio" name="q7" value="2"></td>
             <td><input type="radio" name="q7" value="3"></td>
             <td><input type="radio" name="q7" value="4"></td>
           </tr>
           <tr>
-            <td>8. Respuesta a estímulos auditivos</td>
+            <td>8. Relación con las personas</td>
             <td><input type="radio" name="q8" value="1"></td>
             <td><input type="radio" name="q8" value="2"></td>
             <td><input type="radio" name="q8" value="3"></td>
             <td><input type="radio" name="q8" value="4"></td>
           </tr>
           <tr>
-            <td>9. Mirada y fijación de la mirada</td>
+            <td>9. Relación con las personas</td>
             <td><input type="radio" name="q9" value="1"></td>
             <td><input type="radio" name="q9" value="2"></td>
             <td><input type="radio" name="q9" value="3"></td>
             <td><input type="radio" name="q9" value="4"></td>
           </tr>
           <tr>
-            <td>10. Expresiones faciales</td>
+            <td>10. Relación con las personas</td>
             <td><input type="radio" name="q10" value="1"></td>
             <td><input type="radio" name="q10" value="2"></td>
             <td><input type="radio" name="q10" value="3"></td>
             <td><input type="radio" name="q10" value="4"></td>
           </tr>
+
           <tr>
-            <td>11. Postura corporal</td>
+            <td>11. Relación con las personas</td>
             <td><input type="radio" name="q11" value="1"></td>
             <td><input type="radio" name="q11" value="2"></td>
             <td><input type="radio" name="q11" value="3"></td>
             <td><input type="radio" name="q11" value="4"></td>
           </tr>
           <tr>
-            <td>12. Respuesta a la comunicación</td>
+            <td>12. Relación con las personas</td>
             <td><input type="radio" name="q12" value="1"></td>
             <td><input type="radio" name="q12" value="2"></td>
             <td><input type="radio" name="q12" value="3"></td>
             <td><input type="radio" name="q12" value="4"></td>
           </tr>
+          <tr>
+            <td>13. Relación con las personas</td>
+            <td><input type="radio" name="q13" value="1"></td>
+            <td><input type="radio" name="q13" value="2"></td>
+            <td><input type="radio" name="q13" value="3"></td>
+            <td><input type="radio" name="q13" value="4"></td>
+          </tr>
+          <tr>
+            <td>14. Relación con las personas</td>
+            <td><input type="radio" name="q14" value="1"></td>
+            <td><input type="radio" name="q14" value="2"></td>
+            <td><input type="radio" name="q14" value="3"></td>
+            <td><input type="radio" name="q14" value="4"></td>
+          </tr>
+          <tr>
+            <td>15. Relación con las personas</td>
+            <td><input type="radio" name="q15" value="1"></td>
+            <td><input type="radio" name="q15" value="2"></td>
+            <td><input type="radio" name="q15" value="3"></td>
+            <td><input type="radio" name="q15" value="4"></td>
+          </tr>
+          <!-- Aquí van los demás ítems del test -->
         </tbody>
       </table>
       <input type="submit" value="Calcular puntuación total">
@@ -167,19 +191,18 @@
       calculateScore();
     });
 
- function calculateScore() {
-  let score = 0;
-  const form = document.getElementById("cars-form");
-  for (let i = 1; i <= 12; i++) {
-    const selectedOption = form.elements[`q${i}`].value;
-    score += parseInt(selectedOption);
-  }
-  const totalScore = document.getElementById("total-score");
-  const classification = getClassification(score);
-  totalScore.innerHTML = `<p>Puntuación Total: ${score}</p><p>Clasificación del autismo: ${classification}</p>`;
-  sendDataToGoogleSheets(score, classification);
-}
-
+    function calculateScore() {
+      let score = 0;
+      const form = document.getElementById("cars-form");
+      for (let i = 1; i <= 12; i++) {
+        const selectedOption = form.elements[`q${i}`].value;
+        score += parseInt(selectedOption);
+      }
+      const totalScore = document.getElementById("total-score");
+      const classification = getClassification(score);
+      totalScore.innerHTML = `<p>Puntuación Total: ${score}</p><p>Clasificación del autismo: ${classification}</p>`;
+      sendDataToGoogleSheets(score, classification);
+    }
 
     function getClassification(score) {
       let classification = "";
@@ -211,4 +234,5 @@
     }
   </script>
 </body>
+
 </html>
